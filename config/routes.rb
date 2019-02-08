@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   
   get("/rock", { :controller=> "game", :action => "plays_rock"})
+  get("/paper", { :controller=> "game", :action => "plays_paper"})
+  get("/scissors", { :controller=> "game", :action => "plays_scissors"})
   
   
   devise_for :admin_users, ActiveAdmin::Devise.config
