@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  get("/", { :controller => "misc",  :action => "homepage"})
   get("/rock", { :controller=> "game", :action => "plays_rock"})
   get("/paper", { :controller=> "game", :action => "plays_paper"})
   get("/scissors", { :controller=> "game", :action => "plays_scissors"})
