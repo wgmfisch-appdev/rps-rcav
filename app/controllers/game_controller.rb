@@ -23,15 +23,15 @@ class GameController < ApplicationController
   @computer_move = computer_plays.sample
   if @computer_move == "rock"
     @outcome_rock = "tied"
-    @outcome_paper = "win"
-    @outcome_scissors = "lose"
+    @outcome_paper = "won"
+    @outcome_scissors = "lost"
   elsif @computer_move == "paper"
     @outcome_rock = "lose"
     @outcome_paper = "tied"
-    @outcome_scissors = "win"
+    @outcome_scissors = "won"
   else
     @outcome_rock = "win"
-    @outcome_paper = "lose"
+    @outcome_paper = "lost"
     @outcome_scissors = "tied"
   end
     render("move_templates/played_paper.html.erb")
@@ -42,15 +42,15 @@ class GameController < ApplicationController
   @computer_move = computer_plays.sample
   if @computer_move == "rock"
     @outcome_rock = "tied"
-    @outcome_paper = "win"
-    @outcome_scissors = "lose"
+    @outcome_paper = "won"
+    @outcome_scissors = "lost"
   elsif @computer_move == "paper"
     @outcome_rock = "lose"
     @outcome_paper = "tied"
-    @outcome_scissors = "win"
+    @outcome_scissors = "won"
   else
     @outcome_rock = "win"
-    @outcome_paper = "lose"
+    @outcome_paper = "lost"
     @outcome_scissors = "tied"
   end
     render("move_templates/played_scissors.html.erb")
